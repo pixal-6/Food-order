@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Food Order Builder</h1>
+
+    <div class="main-container">
+
+        <div class="form-section">
+            <h2>Build Your Order</h2>
+
+            <form id="orderForm">
+
+                <label for="food">Food Item</label>
+                <select id="food">
+                    <option value="Burger">Burger</option>
+                    <option value="Pizza">Pizza</option>
+                    <option value="Sandwich">Sandwich</option>
+                </select>
+
+                <label for="size">Size</label>
+                <select id="size">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" min="1" value="1">
+
+                <p>Extras</p>
+
+                <div class="extras">
+                    <label>
+                        <input type="checkbox" value="Cheese" name="extras">
+                        Cheese
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Fries" name="extras">
+                        Fries
+                    </label>
+
+                    <label>
+                        <input type="checkbox" value="Coke" name="extras">
+                        Coke
+                    </label>
+                </div>
+
+                <label for="instructions">Special Instructions</label>
+                <textarea id="instructions" rows="4"
+                    placeholder="Any special requests?"></textarea>
+
+                <button type="submit">Add to Order</button>
+
+            </form>
+        </div>
+
+        <div class="order-section">
+            <h2>Your Order</h2>
+
+            <div id="orderList">
+                <p class="empty-message">Your order is empty.</p>
+            </div>
+
+            <div class="total-box">
+                <span>Total</span>
+                <span>₹<span id="total">0</span></span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
